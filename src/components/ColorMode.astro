@@ -1,0 +1,33 @@
+---
+import Moon from "astro-heroicons/solid/Moon.astro";
+import Sun from "astro-heroicons/solid/Sun.astro";
+---
+
+<div
+    class="flex "
+    x-data="{
+        isDarkMode: true,
+        initTheme() {
+            if (this.isDarkMode) {
+                document.documentElement.classList.add('dark');
+            }else{
+                document.documentElement.classList.remove('dark');
+            }
+        },
+        
+    }"
+    x-init="
+            initTheme();
+            $watch('isDarkMode', value => {
+                initTheme();
+                localStorage.setItem('isDarkMode', value)
+            });
+        "
+>
+    <button class="w-4 h-4" x-show="!isDarkMode" x-on:click="isDarkMode = true">
+        <Moon class="text-black" />
+    </button>
+    <button class="w-4 h-4" x-show="isDarkMode" x-on:click="isDarkMode = false">
+        <Sun class="text-white" />
+    </button>
+</div>
