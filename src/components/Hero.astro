@@ -5,8 +5,8 @@ import Typography from "./Typography.astro";
     <div class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto">
         <div class="flex justify-center items-center content-center flex-wrap">
             <div class="grid grid-cols-4 grid-flow-row-dense w-full">
-                <div class="col-span-4 flex items-center content-center">
-                    <div class="w-20 h-20 md:h-32 md:w-40  ">
+                <div class="col-span-4 flex items-center content-center justify-center md:justify-normal w-full">
+                    <div class="w-20 h-20 md:w-28 md:h-28 lg:h-32 lg:w-40  ">
                         <img
                             src="/logo.webp"
                             alt="Logo Fullstack.pe"
@@ -35,14 +35,14 @@ import Typography from "./Typography.astro";
                             x-init="tipyng()"
                         >
                             <Typography as="h2" variant={"nokio-quote"} color="default">
-                                <span class="hasScope pl-1.5" x-text="text"></span>
+                                <span class="hasScope pl-1.5 absolute" x-text="text"></span>
                             </Typography>
                         </div>
                     </div>
                 </div>
                 <div class="col-span-3 col-start-2 mt-4">
                     <Typography as="h3" variant={"helvetica-quote"} color="default">
-                        Aceleramos tu visión: software a medida y mantenimiento experto.
+                        Aceleramos tu visión: Software a medida y mantenimiento experto.
                     </Typography>
                 </div>
                 <div class="col-span-3 col-start-2">
