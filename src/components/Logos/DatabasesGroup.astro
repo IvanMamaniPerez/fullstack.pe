@@ -6,11 +6,15 @@ import Postgresql from "./Postgresql.astro";
 import Redis from "./Redis.astro";
 import SQLite from "./SQLite.astro";
 import SQLServer from "./SQLServer.astro";
+import WrapperGroup from "./WrapperGroup.astro";
+
 ---
-<Firebase />
-<MongoDB />
-<Mysql />
-<Postgresql />
-<Redis />
-<SQLite />
-<SQLServer />
+<WrapperGroup title="Bases de datos" description="Almacena y accede a tu informacion de manera eficiente de acuerdo a tus necesidades.">
+    <Firebase />
+    <MongoDB />
+    <Mysql />
+    <Postgresql />
+    <Redis />
+    <SQLite />
+    <SQLServer />
+</WrapperGroup>

@@ -8,13 +8,21 @@ import Angular from "./Angular.astro";
 import Laravel from "./Laravel.astro";
 import Flutter from "./Flutter.astro";
 import Svelte from "./Svelte.astro";
+import WrapperGroup from "./WrapperGroup.astro";
 ---
-<NestJs />
-<VueJs />
-<NuxtJs />
-<React />
-<NextJs />
-<Angular />
-<Laravel />
-<Flutter />
-<Svelte  />
+
+<WrapperGroup
+    title="Frameworks"
+    description="Nos ayudan a construir soluciones a gran velocidad y con altos estándares de calidad."
+    reverse={true}
+>
+    <NestJs />
+    <VueJs />
+    <NuxtJs />
+    <React />
+    <NextJs />
+    <Angular />
+    <Laravel />
+    <Flutter />
+    <Svelte />
+</WrapperGroup>

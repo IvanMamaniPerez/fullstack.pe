@@ -4,9 +4,12 @@ import Azure from "./Azure.astro";
 import CloudFlare from "./CloudFlare.astro";
 import GoogleCloud from "./GoogleCloud.astro";
 import Vercel from "./Vercel.astro";
+import WrapperGroup from "./WrapperGroup.astro";
 ---
-<AmazonWebServices />
-<Azure />
-<CloudFlare />
-<GoogleCloud />
-<Vercel />
+<WrapperGroup title="Cloud" description="La alta disponibilidad es importante, por eso dominamos los principales proveedores cloud del mercado">
+    <AmazonWebServices />
+    <Azure />
+    <GoogleCloud />
+    <CloudFlare />
+    <Vercel />
+</WrapperGroup>

@@ -5,7 +5,7 @@ import Typography from "./Typography.astro";
     <div class="w-full grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto">
         <div class="flex justify-center items-center content-center flex-wrap">
             <div class="grid grid-cols-4 grid-flow-row-dense w-full">
-                <div class="col-span-4 flex items-center content-center justify-center md:justify-normal w-full">
+                <div class="col-span-4 flex items-center content-center sm:justify-center md:justify-normal w-full">
                     <div class="w-20 h-20 md:w-28 md:h-28 lg:h-32 lg:w-40  ">
                         <img
                             src="/logo.webp"
@@ -34,19 +34,19 @@ import Typography from "./Typography.astro";
                             }"
                             x-init="tipyng()"
                         >
-                            <Typography as="h2" variant={"nokio-quote"} color="default">
+                            <Typography as="h2" variant={"nokio-hero"} color="default">
                                 <span class="hasScope pl-1.5 absolute" x-text="text"></span>
                             </Typography>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-3 col-start-2 mt-4">
-                    <Typography as="h3" variant={"helvetica-quote"} color="default">
+                <div class="p-5 md:p-0 col-span-4 md:col-span-3 md:col-start-2 mt-6">
+                    <Typography as="h3" variant={"helvetica-quote"} color="default" class:list={'max-w-96 mx-auto md:mx-0 text-justify'}>
                         Aceleramos tu visión: Software a medida y mantenimiento experto.
                     </Typography>
                 </div>
-                <div class="col-span-3 col-start-2">
-                    <button class="rounded-lg bg-cyan-700 p-3 mt-5">
+                <div class="col-span-4 md:col-span-3 md:col-start-2 flex sm:flex-none">
+                    <button class="rounded-lg bg-cyan-700 p-3 mt-5 mx-auto md:mx-0">
                         <Typography as="span" variant="medium" color="default" class:list={'text-xl'}>
                             Contáctanos
                         </Typography>

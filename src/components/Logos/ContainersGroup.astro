@@ -1,6 +1,9 @@
 ---
 import Docker from './Docker.astro'
 import Kubernetes from './Kubernetes.astro'
+import WrapperGroup from "./WrapperGroup.astro";
 ---
-<Docker />
-<Kubernetes />
+<WrapperGroup title='Contenedores' description='Optimizamos los recursos con contenedores y orquestamos el escalamiento de tu aplicativo para llevarlo al siguiente nivel'>
+    <Docker />
+    <Kubernetes />
+</WrapperGroup>

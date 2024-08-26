@@ -3,8 +3,11 @@ import BitBucket from "./BitBucket.astro";
 import Git from "./Git.astro";
 import GitHub from "./GitHub.astro";
 import GitLab from "./GitLab.astro";
+import WrapperGroup from "./WrapperGroup.astro";
 ---
-<BitBucket />
-<Git />
-<GitHub />
-<GitLab />
+<WrapperGroup title="Versionamiento" description="Almacena el codigo de manera organizada y estructurada">
+    <Git />
+    <GitHub />
+    <GitLab />
+    <BitBucket />
+</WrapperGroup>
