@@ -1,15 +1,16 @@
 ---
 import Typography from "./Typography.astro";
-import Javascript from "./Logos/Javascript.astro";
-import Typescript from "./Logos/Typescript.astro";
-import NestJs from "./Logos/NestJs.astro";
-import VueJs from "./Logos/VueJs.astro";
-import NuxtJs from "./Logos/NuxtJs.astro";
-import React from "./Logos/React.astro";
-import NextJs from "./Logos/NextJs.astro";
-import Angular from "./Logos/Angular.astro";
-import PHP from "./Logos/PHP.astro";
-import Laravel from "./Logos/Laravel.astro";
+
+import LanguagesGroup from "./Logos/LanguagesGroup.astro";
+import FrameworksGroup from "./Logos/FrameworksGroup.astro";
+import CloudGroup from "./Logos/CloudGroup.astro";
+import DatabasesGroup from "./Logos/DatabasesGroup.astro";
+import WebPageEcommerceGroup from "./Logos/WebPageEcommerceGroup.astro";
+import SystemOperativeGroup from "./Logos/SystemOperativeGroup.astro";
+import VersionManagmentGroup from "./Logos/VersionManagmentGroup.astro";
+import VideoGamesGroup from "./Logos/3DVideoGamesGroup.astro";
+import DesignStyles from "./Logos/DesignStyles.astro";
+import ContainersGroup from "./Logos/ContainersGroup.astro";
 ---
 
 <div class="container-full max-w-7xl mx-auto my-5">
@@ -19,18 +20,32 @@ import Laravel from "./Logos/Laravel.astro";
         color="sky"
         class:list={"text-center"}>Tecnologias que dominamos</Typography
     >
-    <div class="grid grid-cols-4 md:grid-cols-8 gap-6 mt-5">
-        <Javascript />
-        <Typescript />
-        <NestJs />
-        <VueJs />
-        <NuxtJs />
-        <React />
-        <NextJs />
-        <Angular />
-        <PHP />
-        <Laravel />
-        
-
+    <div class="grid grid-cols-4 md:grid-cols-12 gap-4 mt-5">
+        <LanguagesGroup />
+        <!-- Frameworks -->
+        <FrameworksGroup />
+        <!-- Frameworks -->
+        <!-- Cloud -->
+        <CloudGroup />
+        <!-- Cloud -->
+        <!-- Bases de Datos -->
+        <DatabasesGroup />
+        <!-- Bases de Datos -->
+        <!-- Paginas Web y Ecommerce -->
+        <WebPageEcommerceGroup />
+        <!-- Paginas Web y Ecommerce -->
+        <!-- Sistemas Operativos -->
+        <SystemOperativeGroup />
+        <!-- Sistemas Operativos -->
+        <!-- Versionamiento -->
+        <VersionManagmentGroup />
+        <!-- Versionamiento -->
+        <!-- 3D Y videojuegos -->
+        <VideoGamesGroup />
+        <!-- 3D Y videojuegos -->
+        <!--  -->
+        <DesignStyles />
+        <ContainersGroup />
+       
     </div>
 </div>
