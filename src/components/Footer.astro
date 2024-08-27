@@ -8,28 +8,43 @@ import Typography from "./Typography.astro";
         <div
             class="grid grid-cols-2 lg:grid-cols-4 lg:gap-8 gap-12 pt-14 pb-20 max-w-md mx-auto md:max-w-xl lg:max-w-full"
         >
-            
             <!--End Col-->
             <div class="block col-span-2">
-                <h4 class="text-xl text-white font-bold mb-7">Servicios</h4>
+                <h4 class="text-xl text-white font-bold mb-7 text-center">Servicios</h4>
                 <div class="grid grid-cols-2 gap-x-10 gap-y-5 text-lg">
-                    <a href="/#services" class="text-gray-400 hover:text-white "
+                    <a
+                        aria-label="Software a Medida"
+                        href="/#services"
+                        class="text-gray-400 hover:text-white"
                         >Software a Medida</a
                     >
-                    <a href="/#services" class="text-gray-400 hover:text-white"
+                    <a
+                        aria-label="Aplicaciones Moviles"
+                        href="/#services"
+                        class="text-gray-400 hover:text-white"
                         >Aplicaciones Moviles</a
                     >
-                    <a href="/#services" class="text-gray-400 hover:text-white"
-                        >Chat Bots</a
+                    <a
+                        aria-label="Chat Bots"
+                        href="/#services"
+                        class="text-gray-400 hover:text-white">Chat Bots</a
                     >
 
-                    <a href="/#services" class="text-gray-400 hover:text-white"
-                        >Consutloría IT</a
+                    <a
+                        aria-label="Consultoria IT"
+                        href="/#services"
+                        class="text-gray-400 hover:text-white">Consutloría IT</a
                     >
-                    <a href="/#services" class="text-gray-400 hover:text-white"
+                    <a
+                        aria-label="Paginas Web / Ecommerce"
+                        href="/#services"
+                        class="text-gray-400 hover:text-white"
                         >Páginas Web / Ecommerce</a
                     >
-                    <a href="/#services" class="text-gray-400 hover:text-white"
+                    <a
+                        aria-label="Automatizacion de procesos"
+                        href="/#services"
+                        class="text-gray-400 hover:text-white"
                         >Automatizacion de Procesos</a
                     >
                 </div>
@@ -107,6 +122,7 @@ import Typography from "./Typography.astro";
                 <ul class="text-lg transition-all duration-500">
                     <li class="mb-6">
                         <a
+                            aria-label="Soporte al cliente"
                             href="mailto: support@fullstack.pe"
                             class="text-gray-400 hover:text-white"
                             >Soporte al cliente</a
@@ -115,6 +131,7 @@ import Typography from "./Typography.astro";
 
                     <li class="mb-6">
                         <a
+                            aria-label="Terminos y condiciones"
                             href="/terms-of-service"
                             class="text-gray-400 hover:text-white"
                             >Terminos y condiciones</a
@@ -122,9 +139,10 @@ import Typography from "./Typography.astro";
                     </li>
                     <li>
                         <a
+                            aria-label="Politicas de privacidad"
                             href="/privacy-policies"
                             class="text-gray-400 hover:text-white"
-                            >Privacy Policy</a
+                            >Politicas de privacidad</a
                         >
                     </li>
                 </ul>
@@ -135,7 +153,7 @@ import Typography from "./Typography.astro";
             <div
                 class="flex items-center justify-center flex-col lg:space-y-0 space-y-8 lg:justify-between lg:flex-row"
             >
-                <a href="/" class="flex justify-center">
+                <a aria-label="Logo" href="/" class="flex justify-center">
                     <div
                         class="col-span-4 flex items-center content-center sm:justify-center md:justify-normal w-full"
                     >
@@ -166,10 +184,12 @@ import Typography from "./Typography.astro";
                 </a>
                 <span class="text-gray-400 block text-center"
                     >©
-                    <a href="/">Fullstack.pe</a> 2024, Todos los derechos reservados.</span
+                    <a aria-label="Logo" href="/">Fullstack.pe</a> 2024, Todos los
+                    derechos reservados.</span
                 >
                 <div class="flex mt-4 space-x-4 sm:justify-center sm:mt-0">
                     <a
+                        aria-label="Link a Facebook"
                         href="javascript:;"
                         class="w-9 h-9 rounded-full border border-gray-700 flex justify-center items-center hover:border-indigo-600"
                     >
@@ -187,6 +207,7 @@ import Typography from "./Typography.astro";
                         </svg>
                     </a>
                     <a
+                        aria-label="Link a Twitter o X"
                         href="javascript:;"
                         class="w-9 h-9 rounded-full border border-gray-700 flex justify-center items-center hover:border-indigo-600"
                     >
@@ -202,6 +223,7 @@ import Typography from "./Typography.astro";
                         </svg>
                     </a>
                     <a
+                        aria-label="Link a Instagram"
                         href="javascript:;"
                         class="w-9 h-9 rounded-full border border-gray-700 flex justify-center items-center hover:border-indigo-600"
                     >
@@ -217,6 +239,7 @@ import Typography from "./Typography.astro";
                         </svg>
                     </a>
                     <a
+                        aria-label="Link a linkedin"
                         href="javascript:;"
                         class="w-9 h-9 rounded-full border border-gray-700 flex justify-center items-center hover:border-indigo-600"
                     >
