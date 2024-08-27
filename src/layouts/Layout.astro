@@ -3,6 +3,7 @@ import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
 import type { Preload } from "@/types/Preload";
 import Whatsapp from "@/components/Whatsapp.astro";
+import Footer from "@/components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -57,6 +58,7 @@ const { title } = Astro.props;
 		<!-- <Loader /> -->
 		<Header />
 		<slot />
+		<Footer />
 		<Whatsapp />
 	</body>
 </html>
