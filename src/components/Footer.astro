@@ -6,83 +6,33 @@ import Typography from "./Typography.astro";
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <!--Grid-->
         <div
-            class="grid grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-12 pt-14 pb-20 max-w-md mx-auto md:max-w-xl lg:max-w-full"
+            class="grid grid-cols-2 lg:grid-cols-4 lg:gap-8 gap-12 pt-14 pb-20 max-w-md mx-auto md:max-w-xl lg:max-w-full"
         >
-            <div class="block">
-                <h4 class="text-xl text-white font-bold mb-7">Fullstack.pe</h4>
-                <ul class="text-lg transition-all duration-500">
-                    <li class="mb-6">
-                        <a href="/" class="text-gray-400 hover:text-white"
-                            >Inicio</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="/"
-                            class="text-gray-400 hover:text-white">Servicios</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="/nosotros"
-                            class="text-gray-400 hover:text-white">Nosotros</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="/"
-                            class="text-gray-400 hover:text-white">Proyectos</a
-                        >
-                    </li>
-                </ul>
-            </div>
+            
             <!--End Col-->
-            <div class="block">
+            <div class="block col-span-2">
                 <h4 class="text-xl text-white font-bold mb-7">Servicios</h4>
-                <ul class="text-lg transition-all duration-500">
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Software a Medida</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Aplicaciones Moviles</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Chat Bots</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Consutloría IT</a
-                        >
-                    </li>
-                    <li  class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Páginas Web / Ecommerce</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Automatizacion de Procesos</a
-                        >
-                    </li>
-                </ul>
+                <div class="grid grid-cols-2 gap-x-10 gap-y-5 text-lg">
+                    <a href="/#services" class="text-gray-400 hover:text-white "
+                        >Software a Medida</a
+                    >
+                    <a href="/#services" class="text-gray-400 hover:text-white"
+                        >Aplicaciones Moviles</a
+                    >
+                    <a href="/#services" class="text-gray-400 hover:text-white"
+                        >Chat Bots</a
+                    >
+
+                    <a href="/#services" class="text-gray-400 hover:text-white"
+                        >Consutloría IT</a
+                    >
+                    <a href="/#services" class="text-gray-400 hover:text-white"
+                        >Páginas Web / Ecommerce</a
+                    >
+                    <a href="/#services" class="text-gray-400 hover:text-white"
+                        >Automatizacion de Procesos</a
+                    >
+                </div>
             </div>
             <!--End Col-->
             <!-- <div class="block">
@@ -123,39 +73,56 @@ import Typography from "./Typography.astro";
                     </li>
                 </ul>
             </div> -->
+            <div class="block">
+                <h4 class="text-xl text-white font-bold mb-7">Fullstack.pe</h4>
+                <ul class="text-lg transition-all duration-500">
+                    <li class="mb-6">
+                        <a href="/" class="text-gray-400 hover:text-white"
+                            >Inicio</a
+                        >
+                    </li>
+                    <li class="mb-6">
+                        <a
+                            href="/#services"
+                            class="text-gray-400 hover:text-white">Servicios</a
+                        >
+                    </li>
+                    <li class="mb-6">
+                        <a
+                            href="/about-us"
+                            class="text-gray-400 hover:text-white">Nosotros</a
+                        >
+                    </li>
+                    <!-- <li class="mb-6">
+                        <a
+                            href="/"
+                            class="text-gray-400 hover:text-white">Proyectos</a
+                        >
+                    </li> -->
+                </ul>
+            </div>
             <!--End Col-->
             <div class="block">
-                <h4 class="text-xl text-white font-bold mb-7">Support</h4>
+                <h4 class="text-xl text-white font-bold mb-7">Soporte</h4>
                 <ul class="text-lg transition-all duration-500">
                     <li class="mb-6">
                         <a
-                            href="javascript:;"
+                            href="mailto: support@fullstack.pe"
                             class="text-gray-400 hover:text-white"
-                            >Customer Support</a
+                            >Soporte al cliente</a
                         >
                     </li>
+
                     <li class="mb-6">
                         <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white">Cookies</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white">License</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
+                            href="/terms-of-service"
                             class="text-gray-400 hover:text-white"
-                            >Terms & Conditions</a
+                            >Terminos y condiciones</a
                         >
                     </li>
                     <li>
                         <a
-                            href="javascript:;"
+                            href="/privacy-policies"
                             class="text-gray-400 hover:text-white"
                             >Privacy Policy</a
                         >
