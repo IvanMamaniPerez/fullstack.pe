@@ -1,35 +1,36 @@
 ---
-import type { HTMLTag, Polymorphic } from "astro/types"
+import type { HTMLTag, Polymorphic } from "astro/types";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{
-	as: Tag
-	variant: keyof typeof variantClasses
-	color: keyof typeof colorClasses
-}>
+	as: Tag;
+	variant: keyof typeof variantClasses;
+	color: keyof typeof colorClasses;
+}>;
 
-const { as: Tag, class: className, variant, color, ...props } = Astro.props
+const { as: Tag, class: className, variant, color, ...props } = Astro.props;
 
 const variantClasses: { [key: string]: string } = {
-	"h2": "text-lg font-medium uppercase lg:text-2xl",
-	"h3": "text-md sm:text-2xl font-semibold font-helvetica-rounded",
+	h2: "text-lg font-medium uppercase lg:text-2xl",
+	h3: "text-md sm:text-2xl font-semibold font-helvetica-rounded",
 	"helvetica-title": "text-5xl font-helvetica-rounded ",
 	"section-title": "text-4xl md:text-5xl lg:text-7xl font-helvetica-rounded",
 	"helvetica-subtitle": "text-2xl md:text-4xl font-helvetica-rounded",
-	"helvetica-quote" : "text-xl md:text-2xl lg:text-3xl font-helvetica-rounded font-semibold",
+	"helvetica-quote":
+		"text-xl md:text-2xl lg:text-3xl font-helvetica-rounded font-semibold",
 	"helvetica-body": "text-xl md-text-2xl font-helvetica-rounded",
 	"nokio-hero": "text-2xl font-nokio font-semibold",
 	"nokio-quote": "text-xl sm:text-2xl font-nokio font-semibold",
-	'nokio-body': "text-md font-nokio",
-	'logo-title': "text-md text-center my-1 md:my-3",
-	'skill-title': "text-xl font-nokio",
-	'skill-description': "text-md font-nokio",
-	"body": "textsm md:text-xl font-nokio",
-	"medium": "text-md font-helvetica-rounded",
-	"small": "text-sm font-helvetica-rounded",
-	"big": "text-2xl font-helvetica-rounded",
-	
-	"bigger": "text-4xl sm:text-5xl md:text-7xl uppercase",
-}
+	"nokio-body": "text-md font-nokio",
+	"logo-title": "text-md text-center my-1 md:my-3",
+	"skill-title": "text-xl font-nokio",
+	"skill-description": "text-md font-nokio",
+	body: "textsm md:text-xl font-nokio",
+	medium: "text-md font-helvetica-rounded",
+	small: "text-sm font-helvetica-rounded",
+	big: "text-2xl font-helvetica-rounded",
+
+	bigger: "text-4xl sm:text-5xl md:text-7xl uppercase",
+};
 
 const colorClasses = {
 	default: "text-black dark:text-white",
@@ -37,13 +38,13 @@ const colorClasses = {
 	sky: "text-sky-500 dark:text-sky-500",
 	primary: "text-accent",
 	neutral: "text-neutral-300",
-}
+};
 
 const classes = [
 	variantClasses[variant as keyof typeof variantClasses],
 	colorClasses[color as keyof typeof colorClasses],
 	className,
-]
+];
 ---
 
 <Tag class:list={classes} {...props} tabindex="0">
