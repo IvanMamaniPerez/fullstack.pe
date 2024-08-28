@@ -8,10 +8,10 @@ import Phone from "astro-heroicons/solid/Phone.astro";
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <!--Grid-->
         <div
-            class="grid grid-cols-3 lg:grid-cols-5 lg:gap-8 gap-12 pt-14 pb-20 max-w-md mx-auto md:max-w-xl lg:max-w-full"
+            class="grid grid-cols-2 lg:grid-cols-5 lg:gap-8 gap-12 pt-14 pb-20 max-w-md mx-auto md:max-w-xl lg:max-w-full"
         >
             <!--End Col-->
-            <div class="block col-span-3 md:col-span-2">
+            <div class="col-span-2 md:col-span-2">
                 <h4 class="text-xl text-white font-bold mb-7 text-center">
                     Servicios
                 </h4>
@@ -53,45 +53,7 @@ import Phone from "astro-heroicons/solid/Phone.astro";
                     >
                 </div>
             </div>
-            <!--End Col-->
-            <!-- <div class="block">
-                <h4 class="text-xl text-white font-bold mb-7">Resources</h4>
-                <ul class="text-lg transition-all duration-500">
-                     <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white">FAQs</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Quick Start</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Documentation</a
-                        >
-                    </li>
-                    <li class="mb-6">
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white">User Guide</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="javascript:;"
-                            class="text-gray-400 hover:text-white"
-                            >Plugin Guide</a
-                        >
-                    </li>
-                </ul>
-            </div> -->
+            
             <div class="block">
                 <h4 class="text-xl text-white font-bold mb-7">Fullstack.pe</h4>
                 <ul class="text-lg transition-all duration-500">
@@ -151,26 +113,29 @@ import Phone from "astro-heroicons/solid/Phone.astro";
                     </li>
                 </ul>
             </div>
-            <div class="col-span-3 md:col-span-1"> 
+            <div class="col-span-2 lg:col-span-1"> 
                 <!-- Mail Contact -->
                 <h4 class="text-xl text-white font-bold mb-7">Contacto</h4>
                 <ul class="text-lg transition-all duration-500">
-                    <li class="mb-6 text-white">
-                        <span class="flex items-center gap-2">
+                    <li class="mb-6 text-white flex lg:block">
+                        <span class="flex items-center gap-2 mr-2">
                             <Envelope class="h-4" /> Email:
                         </span>
-                        contact@fullstack.pe
+                        contacto@fullstack.pe
                     </li>
-                    <li class="mb-6 text-white">
-                        <span class="flex items-center gap-2">
+                    <li class="mb-6 text-white block sm:flex lg:block">
+                        <span class="flex items-center gap-2 mr-2">
                             <Phone class="h-4" /> Whatsapp :
                         </span>
-                        <a href="tel:51980879417"> +51 980 879 417 </a>
-                        <br />
-                        <a href="tel:51928802023"> +51 928 802 023 </a>
+                        <div class="flex lg:block">
+                            <a class="mx-2" href="tel:51980879417"> +51 980 879 417 </a>/
+                            <br />
+                            <a class="mx-2" href="tel:51928802023"> +51 928 802 023 </a>
+                        </div>
                     </li>
                 </ul>
             </div>
+        </div>
             <!--Grid-->
             <div class="py-7 border-t border-gray-700">
                 <div
