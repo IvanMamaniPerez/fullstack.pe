@@ -8,7 +8,7 @@ import InformationCircle from "astro-heroicons/solid/InformationCircle.astro";
     openMenuMobile: false,
 }">
     <nav
-        class="mx-auto flex max-w-7xl items-center justify-between p-6 py-4 lg:px-8"
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 py-4 lg:px-8 relative"
         aria-label="Global"
     >
         <div class="flex lg:flex-1">
@@ -65,7 +65,8 @@ import InformationCircle from "astro-heroicons/solid/InformationCircle.astro";
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
-                href="/"
+                href="https://customer.fullstack.pe"
+                target="_blank"
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white font-nokio"
                 >Zona de clientes <span aria-hidden="true">&rarr;</span></a
             >
@@ -73,12 +74,12 @@ import InformationCircle from "astro-heroicons/solid/InformationCircle.astro";
                 x-data="{ tooltip: false }"
                 x-on:mouseover="tooltip = true"
                 x-on:mouseleave="tooltip = false"
-                class="ml-2 h-5 w-5 cursor-pointer relative"
+                class="ml-2 h-5 w-5 cursor-pointer"
             >
                 <InformationCircle class="h-5 w-5 text-white" />
                 <div
                     x-show="tooltip"
-                    class="absolute text-white w-96 bg-sky-900 p-3 rounded-xl ring-2 ring-sky-500"
+                    class="absolute md:right-3 text-white w-96 bg-sky-900 p-3 rounded-xl ring-2 ring-sky-500"
                 >
                     <small class="text-xs">
                         La zona de clientes es exclusiva para nuestros clientes.
@@ -167,12 +168,12 @@ import InformationCircle from "astro-heroicons/solid/InformationCircle.astro";
                             >Zona de clientes</a
                         >
 
-                        <small class="text-white"
-                            >La zona de clientes es exclusiva para nuestros
-                            clientes. Aqui puedes ver como se va desarrollando
-                            tu proyecto, desde planeamiento, desarrollo,
-                            soporte, contraseñas y muchas cosas mas centralizado
-                            en un solo lugar.
+                        <small class="text-white">
+                            La zona de clientes es exclusiva para nuestros
+                            clientes. En ella puedes ver como se va
+                            desarrollando tu proyecto, desde planeamiento,
+                            desarrollo, soporte, contraseñas y muchas cosas mas,
+                            todo centralizado en un solo lugar.
                         </small>
                     </div>
                 </div>
