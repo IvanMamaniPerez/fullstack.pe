@@ -1,4 +1,5 @@
 ---
+import Action from "./Action.astro";
 import Typography from "./Typography.astro";
 ---
 
@@ -28,18 +29,63 @@ import Typography from "./Typography.astro";
                 alt="Contact"
             />
         </div>
-        <div class="my-5">
-            <form action="https://formspree.io/f/xnqoqzqz" method="POST">
+        <div
+            class="my-5"
+            x-data="{
+            data: {
+                name: '',
+                email: '',
+                subject: '',
+                number: '',
+                message: '',
+                accept_terms: false,
+                origin: 'web'
+            },
+            notifySuccess: false,
+            sendForm() {
+                fetch('https://customer.fullstack.pe/api/contact-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(this.data),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        this.notifySuccess = true;
+                    })
+                    .catch((error) => {
+                        this.notifySuccess = false;
+                    });
+            },
+        }"
+        >
+            <form x-on:submit.prevent="sendForm()">
                 <div
                     class="grid grid-cols-1 gap-5 p-10 ring-2 ring-sky-500 rounded-xl"
                 >
+                    <div
+                        x-show="!otifySuccess"
+                        class="bg-green-700 p-2 rounded-md"
+                    >
+                        <Typography
+                            as="p"
+                            variant="small"
+                            color="default"
+                            class:list={"text-center"}
+                            >¡Gracias por contactarnos! Nos pondremos en
+                            contacto contigo lo más pronto posible.</Typography
+                        >
+                    </div>
                     <div>
                         <label
                             for="name"
                             class="block text-sm font-medium text-white"
-                            >Nombre</label
+                            >Nombre *</label
                         >
                         <input
+                            x-model="data.name"
                             type="text"
                             name="name"
                             id="name"
@@ -51,9 +97,10 @@ import Typography from "./Typography.astro";
                         <label
                             for="number"
                             class="block text-sm font-medium text-white"
-                            >Celular</label
+                            >Celular *</label
                         >
                         <input
+                            x-model="data.number"
                             type="text"
                             name="number"
                             id="number"
@@ -65,9 +112,10 @@ import Typography from "./Typography.astro";
                         <label
                             for="email"
                             class="block text-sm font-medium text-white"
-                            >Correo</label
+                            >Correo *</label
                         >
                         <input
+                            x-model="data.email"
                             type="email"
                             name="email"
                             id="email"
@@ -77,21 +125,63 @@ import Typography from "./Typography.astro";
                     </div>
                     <div>
                         <label
+                            for="subject"
+                            class="block text-sm font-medium text-white"
+                            >Asunto *</label
+                        >
+                        <input
+                            x-model="data.subject"
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            class="mt-1 p-1 text-white bg-sky-900 focus-visible:!ring-sky-900 focus:ring-sky-900 active:ring-sky-900 focus:border-sky-900 block w-full shadow-none sm:text-sm border-sky-900 rounded-md"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label
                             for="message"
                             class="block text-sm font-medium text-white"
-                            >Mensaje</label
+                            >Mensaje *</label
                         >
                         <textarea
+                            x-model="data.message"
                             name="message"
                             id="message"
                             rows="5"
                             class="mt-1 p-1 text-white bg-sky-900 focus-visible:!ring-sky-900 focus:ring-sky-900 active:ring-sky-900 focus:border-sky-900 block w-full shadow-none sm:text-sm border-sky-900 rounded-md"
                             required></textarea>
                     </div>
+                    <!-- Acepta termions y condiciones  -->
+                    <div class="flex items
+                    -center">
+                        <input
+                            x-model="data.accept_terms"
+                            type="checkbox"
+                            name="terms"
+                            id="terms"
+                            class="h-4 w-4 text-cyan-900 focus:ring-cyan-900 border-gray-300 rounded"
+                            required
+                        />
+                        <label
+                            for="terms"
+                            class="ml-2 block text-sm font-medium text-white"
+                        >
+                            Aceptar <Action
+                                as="a"
+                                href="/terms-of-service"
+                                aria-label="Terminos y condiciones"
+                                class:list={"!text-sky-500"}
+                            >
+                                términos y condiciones
+                            </Action>
+                        </label>
+                    </div>
                     <div class="flex justify-center">
                         <button
+                            x-bind:disabled="!data.accept_terms"
                             type="submit"
-                            class="inline-flex justify-center py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-cyan-900 px-10"
+                            class="disabled:bg-gray-800 inline-flex justify-center py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-cyan-900 px-10"
                             >Enviar</button
                         >
                     </div>

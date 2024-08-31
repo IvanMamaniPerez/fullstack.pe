@@ -1,6 +1,7 @@
 ---
 import Action from "./Action.astro";
 import ColorMode from "./ColorMode.astro";
+import InformationCircle from "astro-heroicons/solid/InformationCircle.astro";
 ---
 
 <header class="bg-transaparent" x-data="{
@@ -24,7 +25,7 @@ import ColorMode from "./ColorMode.astro";
             <button
                 x-on:click="openMenuMobile = true"
                 type="button"
-                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             >
                 <span class="sr-only">Open main menu</span>
                 <svg
@@ -63,9 +64,31 @@ import ColorMode from "./ColorMode.astro";
             </Action>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <!-- <a href="/" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white font-nokio"
+            <a
+                href="/"
+                class="text-sm font-semibold leading-6 text-gray-900 dark:text-white font-nokio"
                 >Zona de clientes <span aria-hidden="true">&rarr;</span></a
-            > -->
+            >
+            <span
+                x-data="{ tooltip: false }"
+                x-on:mouseover="tooltip = true"
+                x-on:mouseleave="tooltip = false"
+                class="ml-2 h-5 w-5 cursor-pointer relative"
+            >
+                <InformationCircle class="h-5 w-5 text-white" />
+                <div
+                    x-show="tooltip"
+                    class="absolute text-white w-96 bg-sky-900 p-3 rounded-xl ring-2 ring-sky-500"
+                >
+                    <small class="text-xs">
+                        La zona de clientes es exclusiva para nuestros clientes.
+                        En ella puedes ver como se va desarrollando tu proyecto,
+                        desde planeamiento, desarrollo, soporte, contraseñas y
+                        muchas cosas mas, todo centralizado en un solo lugar.
+                    </small>
+                </div>
+            </span>
+
             <!-- <ColorMode /> -->
         </div>
     </nav>
@@ -79,26 +102,26 @@ import ColorMode from "./ColorMode.astro";
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-10"></div>
         <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
         >
             <div class="flex items-center justify-between">
                 <!-- TODO: agregar logo -->
-                <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Your Company</span>
+                <a href="/" class="-m-1.5 p-1.5 flex items-center">
+                    <span class="sr-only">Fullstack.pe</span>
                     <img
-                        class="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt=""
+                        class="h-16 w-auto"
+                        src="/logo.webp"
+                        alt="Logo Fullstack.pe"
                     />
                 </a>
                 <button
                     x-on:click="openMenuMobile = false"
                     type="button"
-                    class="-m-2.5 rounded-md p-2.5 text-gray-700"
+                    class="-m-2.5 rounded-md p-2.5 text-white"
                 >
                     <span class="sr-only">Close menu</span>
                     <svg
-                        class="h-6 w-6"
+                        class="h-6 w-6 stroke-white"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
@@ -115,92 +138,42 @@ import ColorMode from "./ColorMode.astro";
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <div class="-mx-3">
-                            <button
-                                type="button"
-                                class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                aria-controls="disclosure-1"
-                                aria-expanded="false"
-                            >
-                                Product
-                                <!--
-                    Expand/collapse icon, toggle classes based on menu open state.
-  
-                    Open: "rotate-180", Closed: ""
-                  -->
-                                <svg
-                                    class="h-5 w-5 flex-none"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                            <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                            <div class="mt-2 space-y-2" id="disclosure-1">
-                                <a
-                                    href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >Analytics</a
-                                >
-                                <a
-                                    href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >Engagement</a
-                                >
-                                <a
-                                    href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >Security</a
-                                >
-                                <a
-                                    href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >Integrations</a
-                                >
-                                <a
-                                    href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >Automations</a
-                                >
-                                <a
-                                    href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >Watch demo</a
-                                >
-                                <a
-                                    href="#"
-                                    class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >Contact sales</a
-                                >
-                            </div>
-                        </div>
                         <a
-                            href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                            >Features</a
+                            href="/"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-sky-900"
+                            >Inicio</a
                         >
                         <a
-                            href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                            >Marketplace</a
+                            href="/#services"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-sky-900"
+                            >Servicios</a
                         >
                         <a
-                            href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                            >Company</a
+                            href="/about-us"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-sky-900"
+                            >Nosotros</a
+                        >
+                        <a
+                            href="/contacto"
+                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-sky-900"
+                            >Contacto</a
                         >
                     </div>
                     <div class="py-6">
                         <a
-                            href="#"
-                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                            >Log in</a
+                            href="https://customer.fullstack.pe"
+                            target="_blank"
+                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-sky-900"
+                            >Zona de clientes</a
                         >
+
+                        <small class="text-white"
+                            >La zona de clientes es exclusiva para nuestros
+                            clientes. Aqui puedes ver como se va desarrollando
+                            tu proyecto, desde planeamiento, desarrollo,
+                            soporte, contraseñas y muchas cosas mas centralizado
+                            en un solo lugar.
+                        </small>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 ---
+import Action from "./Action.astro";
 import Typography from "./Typography.astro";
 ---
 <div class="container-full bg-gradient-to-t from-sky-900 py-20">
@@ -46,11 +47,11 @@ import Typography from "./Typography.astro";
                     </Typography>
                 </div>
                 <div class="col-span-4 md:col-span-3 md:col-start-2 flex sm:flex-none">
-                    <button class="rounded-lg bg-cyan-700 p-3 mt-5 mx-auto md:mx-0">
+                    <Action as="a" href="/contacto" class="rounded-lg bg-cyan-700 p-3 mt-5 mx-auto md:mx-0">
                         <Typography as="span" variant="medium" color="default" class:list={'text-xl'}>
                             Contáctanos
                         </Typography>
-                    </button>
+                    </Action>
                 </div>
             </div>
         </div>
